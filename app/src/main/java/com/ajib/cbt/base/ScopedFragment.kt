@@ -28,8 +28,6 @@ abstract class ScopedFragment : Fragment(), CoroutineScope {
         job = Job()
     }
 
-    abstract fun stopBlur()
-
 
     /* fun stopBlur(root: ViewGroup) {
          Blurry.delete(root)

@@ -1,11 +1,9 @@
 package com.ajib.cbt.base
 
 import android.content.Context
-import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import com.google.gson.Gson
-import com.provider.citoCabs.base.MainApplication
 
 
 class Prefs {

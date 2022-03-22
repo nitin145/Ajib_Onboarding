@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_create_profile"
+    app:startDestination="@id/get_started_fragment">
+
+
+    <fragment
+        android:id="@+id/get_started_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.GetStartedFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/get_started_fragment" />
+
+
+</navigation>
