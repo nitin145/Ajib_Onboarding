@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickHandler"
+            type="com.ajib.cbt.ui.fragments.createAccount.EnterMobileNumberFragment.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gStartOuter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gEndOuter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/dp50">
+
+
+                <LinearLayout
+                    android:id="@+id/lMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dp10"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/dp20"
+                        android:text="@string/what_is_your_mobile_number"
+                        android:textAppearance="@style/CitoTextAppearance.Basic"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginHorizontal="@dimen/dp10"
+                        android:background="@color/greyColor" />
+
+                    <EditText
+                        style="@style/editTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp55"
+                        android:hint="09267*****" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dp10"
+                    app:layout_constraintTop_toBottomOf="@id/lMobileNumber">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/dp20"
+                        android:text="What is your email?"
+                        android:textAppearance="@style/CitoTextAppearance.Basic"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginHorizontal="@dimen/dp10"
+                        android:background="@color/greyColor" />
+
+                    <EditText
+                        style="@style/editTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp55"
+                        android:hint="Enter Email" />
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_marginHorizontal="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="@font/open_sans"
+                    android:onClick="@{()->clickHandler.onClickNext()}"
+                    android:text="Get Started"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -3,6 +3,7 @@ package com.ajib.cbt.ui.activities
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
@@ -22,9 +23,10 @@ class AuthHandlerActivity : ScopedActivity(), NavController.OnDestinationChanged
         super.onCreate(savedInstanceState)
         window.apply {
             decorView.systemUiVisibility =
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
             statusBarColor = Color.TRANSPARENT
         }
+        setStatusBarColor(R.color.colorPrimary)
         mBinding = DataBindingUtil.setContentView(
             this,
             R.layout.auth_handler_activity
@@ -34,6 +36,10 @@ class AuthHandlerActivity : ScopedActivity(), NavController.OnDestinationChanged
         navController = navHostFragment.navController
         navController.addOnDestinationChangedListener(this)
 
+
+        mBinding.ivBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 
 
@@ -44,17 +50,14 @@ class AuthHandlerActivity : ScopedActivity(), NavController.OnDestinationChanged
     ) {
 
         when (destination.id) {
-
+            R.id.get_started_fragment -> {
+                mBinding.clBottomView.isVisible = false
+            }
 
         }
 
         setProgress(destination)
 
-        window.apply {
-            decorView.systemUiVisibility =
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-            statusBarColor = Color.TRANSPARENT
-        }
 
     }
 
@@ -65,6 +68,7 @@ class AuthHandlerActivity : ScopedActivity(), NavController.OnDestinationChanged
     }
 
     override fun onBackPressed() {
+
 
         if (!navController.navigateUp()) {
             super.onBackPressed()

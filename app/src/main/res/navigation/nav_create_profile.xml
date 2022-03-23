@@ -12,5 +12,11 @@
         android:label="login_fragment"
         tools:layout="@layout/get_started_fragment" />
 
+    <fragment
+        android:id="@+id/enter_mobile_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.EnterMobileNumberFragment"
+        android:label="enter_mobile_fragment"
+        tools:layout="@layout/enter_mobile_fragment" />
+
 
 </navigation>
