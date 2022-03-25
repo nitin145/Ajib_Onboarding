@@ -53,6 +53,7 @@ class AuthHandlerActivity : ScopedActivity(), NavController.OnDestinationChanged
             R.id.get_started_fragment -> {
                 mBinding.clBottomView.isVisible = false
             }
+            else -> mBinding.clBottomView.isVisible = true
 
         }
 
@@ -63,6 +64,16 @@ class AuthHandlerActivity : ScopedActivity(), NavController.OnDestinationChanged
 
     fun setProgress(destination: NavDestination) {
         when (destination.id) {
+            R.id.get_started_fragment -> mBinding.mfProgressBar.progress = 6
+            R.id.enter_mobile_fragment -> mBinding.mfProgressBar.progress = 12
+            R.id.otp_fragment -> mBinding.mfProgressBar.progress = 18
+            R.id.scan_front_id_frgament -> mBinding.mfProgressBar.progress = 24
+            R.id.scan_back_id_frgament -> mBinding.mfProgressBar.progress = 30
+            R.id.personal_details_fragment -> mBinding.mfProgressBar.progress = 36
+            R.id.take_selfie_fragment -> mBinding.mfProgressBar.progress = 42
+            R.id.address_details_fragment -> mBinding.mfProgressBar.progress = 48
+            R.id.employment_details_fragment -> mBinding.mfProgressBar.progress = 54
+            R.id.us_factors_fragment -> mBinding.mfProgressBar.progress = 60
             else -> mBinding.mfProgressBar.progress = 0
         }
     }

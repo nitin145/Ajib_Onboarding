@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="showIcon"
+            type="Boolean" />
+
+        <variable
+            name="hideLine"
+            type="Boolean" />
+
+
+        <variable
+            name="hint"
+            type="String" />
+
+        <variable
+            name="type"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp10"
+            android:fontFamily="@font/open_sans_bold"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:paddingVertical="@dimen/dp15"
+            android:text="@{title}"
+            android:textAppearance="@style/CitoTextAppearance.Basic"
+            app:layout_constraintEnd_toStartOf="@id/ivEndIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/ivEndIcon"
+            android:layout_width="@dimen/dp38"
+            android:layout_height="@dimen/dp38"
+            android:layout_marginEnd="@dimen/dp10"
+            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/colorPrimary" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/greyColor"
+            android:visibility="@{hideLine ? View.GONE :View.VISIBLE,default=visible}"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

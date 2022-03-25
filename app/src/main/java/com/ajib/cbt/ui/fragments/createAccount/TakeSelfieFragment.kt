@@ -4,16 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.ajib.cbt.R
 import com.ajib.cbt.base.ScopedFragment
-import com.ajib.cbt.databinding.EnterMobileFragmentBinding
+import com.ajib.cbt.databinding.TakeSelfieFragmentBinding
 import org.kodein.di.KodeinAware
 
 
-class EnterMobileNumberFragment : ScopedFragment(), KodeinAware {
+class TakeSelfieFragment : ScopedFragment(), KodeinAware {
     override val kodein by lazy { (activity?.applicationContext as KodeinAware).kodein }
-    lateinit var mBinding: EnterMobileFragmentBinding
+    lateinit var mBinding: TakeSelfieFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,7 +23,7 @@ class EnterMobileNumberFragment : ScopedFragment(), KodeinAware {
     ): View {
 
         if (!::mBinding.isInitialized) {
-            mBinding = EnterMobileFragmentBinding.inflate(inflater, container, false).apply {
+            mBinding = TakeSelfieFragmentBinding.inflate(inflater, container, false).apply {
                 clickHandler = ClickHandler()
             }
 
@@ -33,8 +34,16 @@ class EnterMobileNumberFragment : ScopedFragment(), KodeinAware {
 
     inner class ClickHandler {
         fun onClickNext() {
-            findNavController().navigate(R.id.otp_fragment)
+            if (mBinding.bNext.text == getString(R.string.capture)) {
+                mBinding.lMobileNumber.isVisible = false
+                mBinding.clResult.isVisible = true
+                mBinding.bNext.text = "Next"
+            } else {
+                findNavController().navigate(R.id.address_details_fragment)
+
+            }
         }
+
     }
 
 

@@ -18,5 +18,58 @@
         android:label="enter_mobile_fragment"
         tools:layout="@layout/enter_mobile_fragment" />
 
+    <fragment
+        android:id="@+id/otp_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.OtpFragment"
+        android:label="otp_fragment"
+        tools:layout="@layout/otp_fragment" />
+
+    <fragment
+        android:id="@+id/personal_details_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.PersonalDetailsFragment"
+        android:label="personal_details_fragment"
+        tools:layout="@layout/personal_details_fragment" />
+    <fragment
+        android:id="@+id/scan_back_id_frgament"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.ScanBackIDFragment"
+        android:label="scan_back_id_frgament"
+        tools:layout="@layout/scan_back_id_frgament" />
+    <fragment
+        android:id="@+id/scan_front_id_frgament"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.ScanFrontIDFragment"
+        android:label="scan_front_id_frgament"
+        tools:layout="@layout/scan_front_id_frgament" />
+
+    <fragment
+        android:id="@+id/take_selfie_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.TakeSelfieFragment"
+        android:label="take_selfie_fragment"
+        tools:layout="@layout/take_selfie_fragment" />
+    <fragment
+        android:id="@+id/address_details_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.AddressDetailsFragment"
+        android:label="address_details_fragment"
+        tools:layout="@layout/address_details_fragment" />
+    <fragment
+        android:id="@+id/employment_details_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.EmploymentDetailsFragment"
+        android:label="employment_details_fragment"
+        tools:layout="@layout/employment_details_fragment" />
+    <fragment
+        android:id="@+id/us_factors_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.USFactorsFragment"
+        android:label="us_factors_fragment"
+        tools:layout="@layout/us_factors_fragment" />
+    <fragment
+        android:id="@+id/preferred_currency_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.PreferredCurrencyFragment"
+        android:label="preferred_currency_fragment"
+        tools:layout="@layout/preferred_currency_fragment" />
+    <fragment
+        android:id="@+id/preferred_account_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.PreferredAccountFragment"
+        android:label="preferred_account_fragment"
+        tools:layout="@layout/preferred_account_fragment" />
+
 
 </navigation>

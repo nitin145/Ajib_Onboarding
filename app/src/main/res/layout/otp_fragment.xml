@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickHandler"
+            type="com.ajib.cbt.ui.fragments.createAccount.OtpFragment.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gStartOuter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gEndOuter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/dp30">
+
+
+                <LinearLayout
+                    android:id="@+id/lMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp15"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dp10"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/dp20"
+                        android:text="@string/a_verification_code_was_sent_to_your_n_mobile_number_999"
+                        android:textAppearance="@style/CitoTextAppearance.Basic"
+                        android:fontFamily="@font/open_sans_bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginHorizontal="@dimen/dp10"
+                        android:background="@color/greyColor" />
+
+                    <EditText
+                        style="@style/editTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edit_text_height"
+                        android:id="@+id/etCode"
+                        android:maxLength="10"
+                        android:hint="@string/enter_verification_code"
+                        android:inputType="number" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvResend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:gravity="center"
+                    android:text="@string/resend_verification"
+                    android:textAppearance="@style/CitoTextAppearance.Basic"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/lMobileNumber" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clKeypad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dp5"
+                    android:layout_marginHorizontal="@dimen/dp20"
+                    android:layout_marginVertical="@dimen/dp20"
+                    app:layout_constraintEnd_toEndOf="@id/lMobileNumber"
+                    app:layout_constraintStart_toStartOf="@id/lMobileNumber"
+                    app:layout_constraintTop_toBottomOf="@id/tvResend">
+
+                    <TextView
+                        android:id="@+id/t1"
+                        style="@style/KeypadButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:text="1"
+                        android:onClick="@{()->clickHandler.enterOne()}"
+                        android:fontFamily="@font/open_sans_bold"
+                        app:layout_constraintEnd_toStartOf="@id/t2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/t2"
+                        style="@style/KeypadButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginHorizontal="@dimen/dp40"
+                        android:text="2"
+                        android:onClick="@{()->clickHandler.enterTwo()}"
+                        android:fontFamily="@font/open_sans_bold"
+                        app:layout_constraintEnd_toStartOf="@id/t3"
+                        app:layout_constraintStart_toEndOf="@id/t1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/t3"
+                        style="@style/KeypadButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:text="3"
+                        android:onClick="@{()->clickHandler.enterThree()}"
+                        android:fontFamily="@font/open_sans_bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/t2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/t4"
+                        style="@style/KeypadButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="4"
+                        android:onClick="@{()->clickHandler.enterFour()}"
+
+                        android:fontFamily="@font/open_sans_bold"
+                        app:layout_constraintEnd_toStartOf="@id/t5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/t3" />
+
+                    <TextView
+                        android:id="@+id/t5"
+                        style="@style/KeypadButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginHorizontal="@dimen/dp40"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="5"
+                        android:onClick="@{()->clickHandler.enterFive()}"
+                        android:fontFamily="@font/open_sans_bold"
+                        app:layout_constraintEnd_toStartOf="@id/t6"
+                        app:layout_constraintStart_toEndOf="@id/t4"
+                        app:layout_constraintTop_toBottomOf="@id/t3" />
+
+                    <TextView
+                        android:id="@+id/t6"
+                        style="@style/KeypadButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="6"
+                        android:onClick="@{()->clickHandler.enterSix()}"
+                        android:fontFamily="@font/open_sans_bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/t5"
+                        app:layout_constraintTop_toBottomOf="@id/t3" />
+
+
+                    <TextView
+                        android:id="@+id/t7"
+                        style="@style/KeypadButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="7"
+                        android:onClick="@{()->clickHandler.enterSeven()}"
+                        android:fontFamily="@font/open_sans_bold"
+                        app:layout_constraintEnd_toStartOf="@id/t8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/t4" />
+
+                    <TextView
+                        android:id="@+id/t8"
+                        style="@style/KeypadButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginHorizontal="@dimen/dp40"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="8"
+                        android:onClick="@{()->clickHandler.enterEight()}"
+                        android:fontFamily="@font/open_sans_bold"
+                        app:layout_constraintEnd_toStartOf="@id/t9"
+                        app:layout_constraintStart_toEndOf="@id/t7"
+                        app:layout_constraintTop_toBottomOf="@id/t4" />
+
+                    <TextView
+                        android:id="@+id/t9"
+                        style="@style/KeypadButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="9"
+                        android:onClick="@{()->clickHandler.enterNine()}"
+                        android:fontFamily="@font/open_sans_bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/t8"
+                        app:layout_constraintTop_toBottomOf="@id/t4" />
+
+                    <TextView
+                        android:id="@+id/t0"
+                        style="@style/KeypadButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:text="0"
+                        android:onClick="@{()->clickHandler.enterZero()}"
+                        android:fontFamily="@font/open_sans_bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/t8"
+                        app:layout_constraintStart_toStartOf="@id/t8"
+                        app:layout_constraintTop_toBottomOf="@id/t7" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp40"
+                        android:src="@drawable/cut"
+                        android:onClick="@{()->clickHandler.clear()}"
+                        app:layout_constraintBottom_toBottomOf="@id/t0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/t0"
+                        app:tint="@color/colorPrimary" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/bNext"
+                    style="@style/ButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_marginTop="@dimen/dp50"
+                    android:onClick="@{()->clickHandler.onClickNext()}"
+                    android:text="@string/next"
+                    app:layout_constraintEnd_toEndOf="@id/lMobileNumber"
+                    app:layout_constraintStart_toStartOf="@id/lMobileNumber"
+                    app:layout_constraintTop_toBottomOf="@id/clKeypad" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

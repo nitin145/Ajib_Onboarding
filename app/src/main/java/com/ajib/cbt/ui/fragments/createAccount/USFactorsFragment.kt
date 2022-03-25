@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.ajib.cbt.R
 import com.ajib.cbt.base.ScopedFragment
-import com.ajib.cbt.databinding.EnterMobileFragmentBinding
+import com.ajib.cbt.databinding.UsFactorsFragmentBinding
 import org.kodein.di.KodeinAware
 
 
-class EnterMobileNumberFragment : ScopedFragment(), KodeinAware {
+class USFactorsFragment : ScopedFragment(), KodeinAware {
     override val kodein by lazy { (activity?.applicationContext as KodeinAware).kodein }
-    lateinit var mBinding: EnterMobileFragmentBinding
+    lateinit var mBinding: UsFactorsFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,10 +22,9 @@ class EnterMobileNumberFragment : ScopedFragment(), KodeinAware {
     ): View {
 
         if (!::mBinding.isInitialized) {
-            mBinding = EnterMobileFragmentBinding.inflate(inflater, container, false).apply {
+            mBinding = UsFactorsFragmentBinding.inflate(inflater, container, false).apply {
                 clickHandler = ClickHandler()
             }
-
         }
         return mBinding.root
     }
@@ -33,8 +32,9 @@ class EnterMobileNumberFragment : ScopedFragment(), KodeinAware {
 
     inner class ClickHandler {
         fun onClickNext() {
-            findNavController().navigate(R.id.otp_fragment)
+            findNavController().navigate(R.id.preferred_account_fragment)
         }
+
     }
 
 
