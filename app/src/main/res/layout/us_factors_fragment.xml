@@ -54,54 +54,61 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/dp15"
                     android:layout_marginTop="@dimen/dp10"
-                    android:background="@color/white"
+                    android:background="@drawable/bg_white"
                     android:orientation="vertical"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <include
                         layout="@layout/common_question_item"
+                        android:id="@+id/lOne"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/dp10"
                         android:layout_marginTop="@dimen/dp10"
-                        android:background="@color/white"
+                        android:background="@drawable/bg_white"
                         app:title="@{@string/do_you_carry_us}" />
 
                     <include
                         layout="@layout/common_question_item"
+                        android:id="@+id/lTwo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/dp10"
                         android:layout_marginTop="@dimen/dp10"
-                        android:background="@color/white"
+                        android:background="@drawable/bg_white"
                         app:title="@{@string/us_green_card}" />
 
                     <include
                         layout="@layout/common_question_item"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:id="@+id/lThree"
                         android:layout_marginHorizontal="@dimen/dp10"
                         android:layout_marginTop="@dimen/dp10"
-                        android:background="@color/white"
+                        android:background="@drawable/bg_white"
                         app:title="@{@string/born_us}" />
 
                     <include
                         layout="@layout/common_question_item"
                         android:layout_width="match_parent"
+                        android:id="@+id/lFour"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/dp10"
                         android:layout_marginTop="@dimen/dp10"
-                        android:background="@color/white"
+                        android:background="@drawable/bg_white"
                         app:title="@{@string/us_tax_payer}" />
 
                     <include
                         layout="@layout/common_question_item"
                         android:layout_width="match_parent"
+                        android:id="@+id/lFice"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/dp10"
+                        android:layout_marginBottom="@dimen/dp10"
                         android:layout_marginTop="@dimen/dp10"
-                        android:background="@color/white"
-                        app:title="@{@string/us_mailing_address}" />
+                        android:background="@drawable/bg_white"
+                        app:title="@{@string/us_mailing_address}"
+                        app:hideLine="@{true}" />
 
                 </LinearLayout>
 
@@ -109,7 +116,7 @@
                 <Button
                     style="@style/ButtonStyle"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/button_size"
                     android:layout_marginTop="@dimen/dp30"
                     android:onClick="@{()->clickHandler.onClickNext()}"
                     android:text="@string/next"

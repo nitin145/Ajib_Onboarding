@@ -31,7 +31,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@drawable/bg_white"
         android:orientation="vertical">
 
 
@@ -53,9 +53,9 @@
 
         <ImageView
             android:id="@+id/ivEndIcon"
-            android:layout_width="@dimen/dp38"
-            android:layout_height="@dimen/dp38"
-            android:layout_marginEnd="@dimen/dp10"
+            android:layout_width="@dimen/dp34"
+            android:layout_height="@dimen/dp34"
+            android:layout_marginEnd="@dimen/dp5"
             android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +65,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
+            android:layout_height="1dp"
             android:background="@color/greyColor"
             android:visibility="@{hideLine ? View.GONE :View.VISIBLE,default=visible}"
             app:layout_constraintBottom_toBottomOf="parent" />

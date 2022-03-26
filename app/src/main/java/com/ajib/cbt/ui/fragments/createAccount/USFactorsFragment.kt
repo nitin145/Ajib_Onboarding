@@ -26,6 +26,7 @@ class USFactorsFragment : ScopedFragment(), KodeinAware {
                 clickHandler = ClickHandler()
             }
         }
+        onCheckedChangeListenerd()
         return mBinding.root
     }
 
@@ -35,6 +36,45 @@ class USFactorsFragment : ScopedFragment(), KodeinAware {
             findNavController().navigate(R.id.preferred_account_fragment)
         }
 
+
+    }
+
+    fun onCheckedChangeListenerd() {
+        mBinding.lOne.toggle.setOnCheckedChangeListener { p0, p1 ->
+            when (p1) {
+                R.id.yes -> {
+                    findNavController().navigate(R.id.scan_us_passport_frgament)
+                }
+            }
+        }
+        mBinding.lTwo.toggle.setOnCheckedChangeListener { p0, p1 ->
+            when (p1) {
+                R.id.yes -> {
+                    findNavController().navigate(R.id.scan_us_passport_frgament)
+                }
+            }
+        }
+        mBinding.lThree.toggle.setOnCheckedChangeListener { p0, p1 ->
+            when (p1) {
+                R.id.yes -> {
+                    findNavController().navigate(R.id.scan_us_passport_frgament)
+                }
+            }
+        }
+        mBinding.lFour.toggle.setOnCheckedChangeListener { p0, p1 ->
+            when (p1) {
+                R.id.yes -> {
+                    findNavController().navigate(R.id.scan_us_passport_frgament)
+                }
+            }
+        }
+        mBinding.lFice.toggle.setOnCheckedChangeListener { p0, p1 ->
+            when (p1) {
+                R.id.yes -> {
+                    findNavController().navigate(R.id.scan_us_passport_frgament)
+                }
+            }
+        }
     }
 
 

@@ -1,8 +1,7 @@
 package com.ajib.cbt.ui.activities
 
-import android.graphics.Color
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.View
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
@@ -19,14 +18,11 @@ class AuthHandlerActivity : ScopedActivity(), NavController.OnDestinationChanged
     private lateinit var navHostFragment: NavHostFragment
     var listener: onClickListeners? = null
 
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.apply {
-            decorView.systemUiVisibility =
-                View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-            statusBarColor = Color.TRANSPARENT
-        }
-        setStatusBarColor(R.color.colorPrimary)
+
+        setStatusBarColor(R.color.themeColor)
         mBinding = DataBindingUtil.setContentView(
             this,
             R.layout.auth_handler_activity
@@ -66,21 +62,24 @@ class AuthHandlerActivity : ScopedActivity(), NavController.OnDestinationChanged
         when (destination.id) {
             R.id.get_started_fragment -> mBinding.mfProgressBar.progress = 6
             R.id.enter_mobile_fragment -> mBinding.mfProgressBar.progress = 12
-            R.id.otp_fragment -> mBinding.mfProgressBar.progress = 18
-            R.id.scan_front_id_frgament -> mBinding.mfProgressBar.progress = 24
-            R.id.scan_back_id_frgament -> mBinding.mfProgressBar.progress = 30
-            R.id.personal_details_fragment -> mBinding.mfProgressBar.progress = 36
-            R.id.take_selfie_fragment -> mBinding.mfProgressBar.progress = 42
-            R.id.address_details_fragment -> mBinding.mfProgressBar.progress = 48
-            R.id.employment_details_fragment -> mBinding.mfProgressBar.progress = 54
-            R.id.us_factors_fragment -> mBinding.mfProgressBar.progress = 60
-            else -> mBinding.mfProgressBar.progress = 0
+            R.id.scan_front_id_frgament -> mBinding.mfProgressBar.progress = 18
+            R.id.scan_back_id_frgament -> mBinding.mfProgressBar.progress = 24
+            R.id.personal_details_fragment -> mBinding.mfProgressBar.progress = 30
+            R.id.take_selfie_fragment -> mBinding.mfProgressBar.progress = 36
+            R.id.address_details_fragment -> mBinding.mfProgressBar.progress = 42
+            R.id.employment_details_fragment -> mBinding.mfProgressBar.progress = 48
+            R.id.us_factors_fragment -> mBinding.mfProgressBar.progress = 54
+            R.id.preferred_account_fragment -> mBinding.mfProgressBar.progress = 60
+            R.id.preferred_currency_fragment -> mBinding.mfProgressBar.progress = 66
+            R.id.branch_fragment -> mBinding.mfProgressBar.progress = 72
+            R.id.terms_fragment -> mBinding.mfProgressBar.progress = 78
+            R.id.create_password_fragment -> mBinding.mfProgressBar.progress = 84
+            R.id.face_id_fragment -> mBinding.mfProgressBar.progress = 92
+            R.id.account_completition_fragment -> mBinding.mfProgressBar.progress = 100
         }
     }
 
     override fun onBackPressed() {
-
-
         if (!navController.navigateUp()) {
             super.onBackPressed()
         }

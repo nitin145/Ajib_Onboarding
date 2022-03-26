@@ -10,7 +10,7 @@
 
         <variable
             name="clickHandler"
-            type="com.ajib.cbt.ui.fragments.createAccount.PreferredAccountFragment.ClickHandler" />
+            type="com.ajib.cbt.ui.fragments.createAccount.FaceIDFragment.ClickHandler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,7 +64,7 @@
                         android:fontFamily="@font/open_sans_bold"
                         android:gravity="center"
                         android:paddingVertical="@dimen/dp15"
-                        android:text="@string/what_is_your_preferred_account_type"
+                        android:text="@string/would_you_like_to_use_face_id_touch_id_n_to_access_ajib_mobile"
                         android:textAppearance="@style/CitoTextAppearance.Basic" />
 
                     <View
@@ -79,8 +79,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/dp10"
                         android:background="@drawable/bg_white"
-                        app:title="@{@string/current_account}" />
-
+                        app:title="@{@string/yes}" />
 
                     <include
                         layout="@layout/common_option_item"
@@ -89,7 +88,7 @@
                         android:layout_marginHorizontal="@dimen/dp10"
                         android:background="@drawable/bg_white"
                         app:hideLine="@{true}"
-                        app:title="@{@string/saving_account}" />
+                        app:title="@{@string/no}" />
 
 
                 </LinearLayout>

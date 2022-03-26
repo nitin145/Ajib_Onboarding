@@ -6,6 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         android:background="@color/bg_color">
 
 
@@ -23,7 +24,7 @@
 
                 <ImageView
                     android:id="@+id/ivBack"
-                    android:layout_width="@dimen/dp30"
+                    android:layout_width="@dimen/dp26"
                     android:layout_height="0dp"
                     android:layout_marginStart="@dimen/dp20"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
@@ -31,14 +32,14 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/white" />
+                    />
 
                 <TextView
                     style="@style/CitoTextAppearance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Open New Account"
-                    android:textSize="@dimen/sp20"
+                    android:textSize="@dimen/sp18"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

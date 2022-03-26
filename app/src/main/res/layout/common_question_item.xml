@@ -10,12 +10,16 @@
             name="title"
             type="String" />
 
+        <variable
+            name="hideLine"
+            type="Boolean" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@drawable/bg_white"
         android:orientation="vertical">
 
 
@@ -36,7 +40,7 @@
         <RadioGroup
             android:id="@+id/toggle"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp35"
+            android:layout_height="@dimen/dp32"
             android:layout_marginTop="@dimen/dp10"
             android:background="@drawable/radio_bg"
             android:checkedButton="@+id/offer"
@@ -44,11 +48,12 @@
             app:layout_constraintTop_toBottomOf="@id/tvTitle">
 
             <RadioButton
-                android:id="@+id/search"
+                android:id="@+id/yes"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/dp3"
                 android:layout_weight="1"
+                android:fontFamily="@font/open_sans_bold"
                 android:background="@drawable/toggle_widget_background"
                 android:button="@null"
                 android:checked="false"
@@ -57,7 +62,7 @@
                 android:textColor="@color/switch_text_selector" />
 
             <RadioButton
-                android:id="@+id/offer"
+                android:id="@+id/no"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/dp3"
@@ -65,7 +70,7 @@
                 android:background="@drawable/toggle_widget_background"
                 android:button="@null"
                 android:checked="true"
-                android:fontFamily="@font/open_sans"
+                android:fontFamily="@font/open_sans_bold"
                 android:gravity="center"
                 android:text="No"
                 android:textColor="@color/switch_text_selector" />
@@ -73,8 +78,9 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
+            android:layout_height="1dp"
             android:layout_marginTop="@dimen/dp10"
+            android:visibility="@{hideLine ? View.GONE :View.VISIBLE,default=visible}"
             android:background="@color/greyColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -7,13 +7,15 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.ajib.cbt.R
 import com.ajib.cbt.base.ScopedFragment
-import com.ajib.cbt.databinding.PreferredCurrencyFragmentBinding
+import com.ajib.cbt.databinding.PersonalDetailsFragmentBinding
+import com.ajib.cbt.databinding.ScanFrontIdFrgamentBinding
+import com.ajib.cbt.databinding.ScanUsPassportFrgamentBinding
 import org.kodein.di.KodeinAware
 
 
-class PreferredCurrencyFragment : ScopedFragment(), KodeinAware {
+class ScanUSPassportFragment : ScopedFragment(), KodeinAware {
     override val kodein by lazy { (activity?.applicationContext as KodeinAware).kodein }
-    lateinit var mBinding: PreferredCurrencyFragmentBinding
+    lateinit var mBinding: ScanUsPassportFrgamentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,7 +24,7 @@ class PreferredCurrencyFragment : ScopedFragment(), KodeinAware {
     ): View {
 
         if (!::mBinding.isInitialized) {
-            mBinding = PreferredCurrencyFragmentBinding.inflate(inflater, container, false).apply {
+            mBinding = ScanUsPassportFrgamentBinding.inflate(inflater, container, false).apply {
                 clickHandler = ClickHandler()
             }
 
@@ -33,9 +35,8 @@ class PreferredCurrencyFragment : ScopedFragment(), KodeinAware {
 
     inner class ClickHandler {
         fun onClickNext() {
-            findNavController().navigate(R.id.branch_fragment)
+            findNavController().navigate(R.id.scan_form_fragment)
         }
-
     }
 
 

@@ -39,7 +39,7 @@
     <string name="add_more_details_optional">Add more details (Optional)</string>
     <string name="po_box">P.O Box</string>
     <string name="postal_code">Postal Code</string>
-    <string name="please_enter_your_payment_details_below">Please enter your payment details\n below</string>
+    <string name="please_enter_your_payment_details_below">Please enter your employment details\n below</string>
     <string name="employpent_type">Employment type</string>
     <string name="profession">Profession</string>
     <string name="income_range">Income Range</string>
@@ -56,4 +56,26 @@
     <string name="us_dollar">US Dollar</string>
     <string name="euro">Euro</string>
     <string name="pound">Pound Sterling</string>
+    <string name="abdaali_mall_branch">Abdali Mall Branch</string>
+    <string name="abdoun_branch">Abdoun Branch</string>
+    <string name="al_yasmeen_branch">Al Yasmeen Branch</string>
+    <string name="dabouq_branch">Dabouq Branch</string>
+    <string name="main_branch">Main Branch</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="dummy_terms">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="i_agree">I Agree</string>
+    <string name="your_ajib_mobile_username_is">Your AJIB mobile username is</string>
+    <string name="_3938">3938</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="save">Save</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="would_you_like_to_use_face_id_touch_id_n_to_access_ajib_mobile">Would you like to use Face ID/Touch ID\n to access AJIB Mobile?</string>
+    <string name="welcome_to_ajib">Welcome to AJIB</string>
+    <string name="a_confirmation_will_all_n_details_has_been_sent_to_you">A confirmation will all\n details has been sent to you</string>
+    <string name="account_number_87877">Account Number: 87877</string>
+    <string name="login_page">Login Page</string>
+    <string name="otp_fragment">otp_fragemnt</string>
+    <string name="via">via</string>
+    <string name="please_scan_your_us_passport">Please scan your US passport</string>
 </resources>

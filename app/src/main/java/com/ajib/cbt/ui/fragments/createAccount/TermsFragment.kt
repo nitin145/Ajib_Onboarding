@@ -4,16 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.ajib.cbt.R
 import com.ajib.cbt.base.ScopedFragment
-import com.ajib.cbt.databinding.PreferredCurrencyFragmentBinding
+import com.ajib.cbt.databinding.TermsFragmentBinding
 import org.kodein.di.KodeinAware
 
 
-class PreferredCurrencyFragment : ScopedFragment(), KodeinAware {
+class TermsFragment : ScopedFragment(), KodeinAware {
     override val kodein by lazy { (activity?.applicationContext as KodeinAware).kodein }
-    lateinit var mBinding: PreferredCurrencyFragmentBinding
+    lateinit var mBinding: TermsFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,7 +23,7 @@ class PreferredCurrencyFragment : ScopedFragment(), KodeinAware {
     ): View {
 
         if (!::mBinding.isInitialized) {
-            mBinding = PreferredCurrencyFragmentBinding.inflate(inflater, container, false).apply {
+            mBinding = TermsFragmentBinding.inflate(inflater, container, false).apply {
                 clickHandler = ClickHandler()
             }
 
@@ -33,7 +34,11 @@ class PreferredCurrencyFragment : ScopedFragment(), KodeinAware {
 
     inner class ClickHandler {
         fun onClickNext() {
-            findNavController().navigate(R.id.branch_fragment)
+            findNavController().navigate(
+                R.id.otp_fragment, bundleOf(
+                    getString(R.string.via) to getString(R.string.terms_conditions)
+                )
+            )
         }
 
     }

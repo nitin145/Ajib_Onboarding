@@ -10,7 +10,7 @@
 
         <variable
             name="clickHandler"
-            type="com.ajib.cbt.ui.fragments.createAccount.PreferredAccountFragment.ClickHandler" />
+            type="com.ajib.cbt.ui.fragments.createAccount.TermsFragment.ClickHandler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,7 +64,7 @@
                         android:fontFamily="@font/open_sans_bold"
                         android:gravity="center"
                         android:paddingVertical="@dimen/dp15"
-                        android:text="@string/what_is_your_preferred_account_type"
+                        android:text="@string/terms_conditions"
                         android:textAppearance="@style/CitoTextAppearance.Basic" />
 
                     <View
@@ -73,23 +73,15 @@
                         android:layout_marginHorizontal="@dimen/dp10"
                         android:background="@color/greyColor" />
 
-                    <include
-                        layout="@layout/common_option_item"
+                    <TextView
                         android:layout_width="match_parent"
+                        android:layout_marginHorizontal="@dimen/dp20"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp10"
-                        android:background="@drawable/bg_white"
-                        app:title="@{@string/current_account}" />
-
-
-                    <include
-                        layout="@layout/common_option_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp10"
-                        android:background="@drawable/bg_white"
-                        app:hideLine="@{true}"
-                        app:title="@{@string/saving_account}" />
+                        android:fontFamily="@font/open_sans_bold"
+                        android:gravity="start"
+                        android:paddingVertical="@dimen/dp10"
+                        android:text="@string/dummy_terms"
+                        android:textAppearance="@style/CitoTextAppearance.Basic" />
 
 
                 </LinearLayout>
@@ -101,8 +93,8 @@
                     android:layout_height="@dimen/button_size"
                     android:layout_marginTop="@dimen/dp30"
                     android:onClick="@{()->clickHandler.onClickNext()}"
-                    android:text="@string/next"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/i_agree"
+                    app:layout_constraintTop_toBottomOf="@id/lEmployeeDetails"
                     app:layout_constraintEnd_toEndOf="@id/lEmployeeDetails"
                     app:layout_constraintStart_toStartOf="@id/lEmployeeDetails" />
 

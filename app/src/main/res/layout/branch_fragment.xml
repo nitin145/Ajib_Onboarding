@@ -10,7 +10,7 @@
 
         <variable
             name="clickHandler"
-            type="com.ajib.cbt.ui.fragments.createAccount.PreferredAccountFragment.ClickHandler" />
+            type="com.ajib.cbt.ui.fragments.createAccount.BranchFragment.ClickHandler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,13 +63,57 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/open_sans_bold"
                         android:gravity="center"
-                        android:paddingVertical="@dimen/dp15"
-                        android:text="@string/what_is_your_preferred_account_type"
+                        android:paddingTop="@dimen/dp20"
+                        android:text="Which branch do you prefer to deal with?"
                         android:textAppearance="@style/CitoTextAppearance.Basic" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_height="@dimen/dp32"
+                        android:layout_marginHorizontal="@dimen/dp20"
+                        android:background="@drawable/search_bg">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/open_sans"
+                            android:hint="Search"
+                            android:gravity="start|center"
+                            android:background="@android:color/transparent"
+                            android:paddingHorizontal="@dimen/dp20"
+                            android:includeFontPadding="false"
+                            android:textColorHint="#B3AFAF"
+                            android:textSize="@dimen/sp_14"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/clSearch"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clSearch"
+                            android:layout_width="@dimen/dp35"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/search_icon_bg"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp20"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:src="@drawable/ic_baseline_search_24"
+                                android:layout_height="@dimen/dp20"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp20"
                         android:layout_marginHorizontal="@dimen/dp10"
                         android:background="@color/greyColor" />
 
@@ -79,7 +123,23 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/dp10"
                         android:background="@drawable/bg_white"
-                        app:title="@{@string/current_account}" />
+                        app:title="@{@string/abdaali_mall_branch}" />
+
+                    <include
+                        layout="@layout/common_option_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp10"
+                        android:background="@drawable/bg_white"
+                        app:title="@{@string/abdoun_branch}" />
+
+                    <include
+                        layout="@layout/common_option_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp10"
+                        android:background="@drawable/bg_white"
+                        app:title="@{@string/al_yasmeen_branch}" />
 
 
                     <include
@@ -88,8 +148,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/dp10"
                         android:background="@drawable/bg_white"
+                        app:title="@{@string/dabouq_branch}" />
+
+                    <include
+                        layout="@layout/common_option_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp10"
+                        android:background="@drawable/bg_white"
                         app:hideLine="@{true}"
-                        app:title="@{@string/saving_account}" />
+                        app:title="@{@string/main_branch}" />
 
 
                 </LinearLayout>

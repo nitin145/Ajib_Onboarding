@@ -5,12 +5,9 @@
 
     <data>
 
-        <import type="android.text.InputType" />
-
-
         <variable
             name="clickHandler"
-            type="com.ajib.cbt.ui.fragments.createAccount.PreferredAccountFragment.ClickHandler" />
+            type="com.ajib.cbt.ui.fragments.createAccount.ScanUSPassportFragment.ClickHandler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -49,62 +46,42 @@
 
 
                 <LinearLayout
-                    android:id="@+id/lEmployeeDetails"
+                    android:id="@+id/lMobileNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/dp15"
-                    android:layout_marginTop="@dimen/dp10"
                     android:background="@drawable/bg_white"
                     android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dp10"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/open_sans_bold"
                         android:gravity="center"
-                        android:paddingVertical="@dimen/dp15"
-                        android:text="@string/what_is_your_preferred_account_type"
-                        android:textAppearance="@style/CitoTextAppearance.Basic" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginHorizontal="@dimen/dp10"
-                        android:background="@color/greyColor" />
-
-                    <include
-                        layout="@layout/common_option_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp10"
-                        android:background="@drawable/bg_white"
-                        app:title="@{@string/current_account}" />
-
-
-                    <include
-                        layout="@layout/common_option_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp10"
-                        android:background="@drawable/bg_white"
-                        app:hideLine="@{true}"
-                        app:title="@{@string/saving_account}" />
+                        android:fontFamily="@font/open_sans_bold"
+                        android:paddingVertical="@dimen/dp20"
+                        android:text="@string/please_scan_your_us_passport"
+                        android:textAppearance="@style/CitoTextAppearance.Basic"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
 
 
+
                 <Button
+                    android:id="@+id/bNext"
                     style="@style/ButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/button_size"
-                    android:layout_marginTop="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp50"
+                    android:text="@string/scan"
+
                     android:onClick="@{()->clickHandler.onClickNext()}"
-                    android:text="@string/next"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@id/lEmployeeDetails"
-                    app:layout_constraintStart_toStartOf="@id/lEmployeeDetails" />
+                    app:layout_constraintEnd_toEndOf="@id/lMobileNumber"
+                    app:layout_constraintStart_toStartOf="@id/lMobileNumber"
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

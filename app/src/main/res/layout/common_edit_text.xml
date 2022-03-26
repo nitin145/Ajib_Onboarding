@@ -15,6 +15,10 @@
             type="Boolean" />
 
         <variable
+            name="showDate"
+            type="Boolean" />
+
+        <variable
             name="hideLine"
             type="Boolean" />
 
@@ -31,7 +35,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@drawable/bg_white"
         android:orientation="vertical">
 
 
@@ -52,13 +56,13 @@
         <EditText
             style="@style/editTextStyle"
             android:layout_width="0dp"
-            android:layout_height="@dimen/dp32"
+            android:layout_height="@dimen/dp28"
             android:layout_marginHorizontal="@dimen/dp10"
             android:backgroundTint="@color/greyColor"
             android:hint="@{hint}"
             android:inputType="@{type}"
             android:padding="@dimen/dp0"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/themeColor"
             app:layout_constraintEnd_toStartOf="@id/ivEndIcon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvTitle" />
@@ -66,11 +70,23 @@
 
         <ImageView
             android:id="@+id/ivEndIcon"
-            android:layout_width="@dimen/dp38"
-            android:layout_height="@dimen/dp38"
-            android:layout_marginEnd="@dimen/dp10"
+            android:layout_width="@dimen/dp34"
+            android:layout_height="@dimen/dp34"
+            android:layout_marginEnd="@dimen/dp5"
             android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
             android:visibility="@{showIcon ? View.VISIBLE :View.GONE,default=gone}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/ivDateIcon"
+            android:layout_width="@dimen/dp28"
+            android:layout_height="@dimen/dp28"
+            android:layout_marginEnd="@dimen/dp10"
+            android:src="@drawable/ic_baseline_date_range_24"
+            android:visibility="@{showDate ? View.VISIBLE :View.GONE,default=gone}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -79,7 +95,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
+            android:layout_height="1dp"
             android:background="@color/greyColor"
             android:visibility="@{hideLine ? View.GONE :View.VISIBLE,default=visible}"
             app:layout_constraintBottom_toBottomOf="parent" />

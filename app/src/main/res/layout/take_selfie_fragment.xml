@@ -50,7 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/dp15"
-                    android:background="@color/white"
+                    android:background="@drawable/bg_white"
                     android:orientation="vertical"
                     android:paddingHorizontal="@dimen/dp10"
                     app:layout_constraintTop_toTopOf="parent">
@@ -94,7 +94,7 @@
                         app:layout_constraintTop_toBottomOf="@id/ivDone"
                         android:text="@string/your_selfie_matches_your_id_picture"
                         android:textAppearance="@style/CitoTextAppearance.Basic"
-                        android:textStyle="bold" />
+                       android:fontFamily="@font/open_sans_bold" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

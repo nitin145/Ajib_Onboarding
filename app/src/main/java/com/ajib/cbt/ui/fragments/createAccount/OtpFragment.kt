@@ -34,7 +34,11 @@ class OtpFragment : ScopedFragment(), KodeinAware {
 
     inner class ClickHandler {
         fun onClickNext() {
-            findNavController().navigate(R.id.scan_front_id_frgament)
+            if (arguments?.getString(getString(R.string.via)) == getString(R.string.terms_conditions)) {
+                findNavController().navigate(R.id.create_password_fragment)
+            } else {
+                findNavController().navigate(R.id.scan_front_id_frgament)
+            }
         }
 
         fun enterOne() {
@@ -90,6 +94,7 @@ class OtpFragment : ScopedFragment(), KodeinAware {
             mBinding.etCode.setText(enteredText)
 
         }
+
         fun enterZero() {
             enteredText = mBinding.etCode.text.toString() + "0"
             mBinding.etCode.setText(enteredText)
@@ -106,7 +111,7 @@ class OtpFragment : ScopedFragment(), KodeinAware {
                     )
                 )
 
-            }else{
+            } else {
                 mBinding.etCode.setText("")
 
             }

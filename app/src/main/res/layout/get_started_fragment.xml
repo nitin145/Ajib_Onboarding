@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/dp15"
                     android:layout_marginTop="@dimen/dp10"
-                    android:background="@color/white"
+                    android:background="@drawable/bg_white"
                     android:orientation="vertical"
                     android:paddingHorizontal="@dimen/dp10"
                     app:layout_constraintTop_toBottomOf="@id/tvTitle">
@@ -80,8 +80,8 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="1.5dp"
-                        android:layout_marginHorizontal="@dimen/dp10"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="@dimen/dp7"
                         android:layout_marginTop="@dimen/dp10"
                         android:background="@color/greyColor" />
 
@@ -107,14 +107,14 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="1.5dp"
+                        android:layout_height="1dp"
                         android:layout_marginHorizontal="@dimen/dp10"
                         android:background="@color/greyColor" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp10"
+                        android:layout_marginHorizontal="@dimen/dp7"
                         android:paddingVertical="@dimen/dp13"
                         android:orientation="horizontal">
 
@@ -133,8 +133,8 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="1.5dp"
-                        android:layout_marginHorizontal="@dimen/dp10"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="@dimen/dp7"
                         android:background="@color/greyColor" />
 
                     <LinearLayout
@@ -159,8 +159,8 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="1.5dp"
-                        android:layout_marginHorizontal="@dimen/dp10"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="@dimen/dp7"
                         android:background="@color/greyColor" />
 
                     <LinearLayout
@@ -185,8 +185,8 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="1.5dp"
-                        android:layout_marginHorizontal="@dimen/dp10"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="@dimen/dp7"
                         android:background="@color/greyColor" />
 
                     <LinearLayout

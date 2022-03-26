@@ -30,6 +30,16 @@
         android:label="personal_details_fragment"
         tools:layout="@layout/personal_details_fragment" />
     <fragment
+        android:id="@+id/scan_us_passport_frgament"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.ScanUSPassportFragment"
+        android:label="scan_us_passport_frgament"
+        tools:layout="@layout/scan_us_passport_frgament" />
+    <fragment
+        android:id="@+id/scan_form_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.ScanFormFragment"
+        android:label="scan_form_fragment"
+        tools:layout="@layout/scan_form_fragment" />
+    <fragment
         android:id="@+id/scan_back_id_frgament"
         android:name="com.ajib.cbt.ui.fragments.createAccount.ScanBackIDFragment"
         android:label="scan_back_id_frgament"
@@ -70,6 +80,33 @@
         android:name="com.ajib.cbt.ui.fragments.createAccount.PreferredAccountFragment"
         android:label="preferred_account_fragment"
         tools:layout="@layout/preferred_account_fragment" />
+
+    <fragment
+        android:id="@+id/branch_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.BranchFragment"
+        android:label="branch_fragment"
+        tools:layout="@layout/branch_fragment" />
+    <fragment
+        android:id="@+id/terms_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.TermsFragment"
+        android:label="terms_fragment"
+        tools:layout="@layout/terms_fragment" />
+    <fragment
+        android:id="@+id/create_password_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.CreatePasswordFragment"
+        android:label="create_password_fragment"
+        tools:layout="@layout/create_password_fragment" />
+
+    <fragment
+        android:id="@+id/face_id_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.FaceIDFragment"
+        android:label="face_id_fragment"
+        tools:layout="@layout/face_id_fragment" />
+    <fragment
+        android:id="@+id/account_completition_fragment"
+        android:name="com.ajib.cbt.ui.fragments.createAccount.AccountCompletitionFragment"
+        android:label="account_completition_fragment"
+        tools:layout="@layout/account_completition_fragment" />
 
 
 </navigation>
