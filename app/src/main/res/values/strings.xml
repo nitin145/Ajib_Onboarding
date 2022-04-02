@@ -3,7 +3,7 @@
     <string name="get_started_title">Welcome to\n Arban jordan Investment Bank - AJIB</string>
     <string name="terms_text">Before getting started, please\n make sure:</string>
     <string name="you_have_a_jordanion_national_id">You have a jordanion national ID</string>
-    <string name="throughout_this_process_your_information_will_be_saved_and_secured_with_aiib">Throughout this process,your information\n will be saved and secured with AIIB</string>
+    <string name="throughout_this_process_your_information_will_be_saved_and_secured_with_aiib">Throughout this process,your information\n will be saved and secured with AJIB</string>
     <string name="what_is_your_mobile_number">What is your mobile number?</string>
     <string name="get_started">Get Started</string>
     <string name="next">Next</string>
@@ -43,9 +43,9 @@
     <string name="employpent_type">Employment type</string>
     <string name="profession">Profession</string>
     <string name="income_range">Income Range</string>
-    <string name="do_you_carry_us">Dou you carry US citizenship?</string>
+    <string name="do_you_carry_us">Do you carry US citizenship?</string>
     <string name="us_tax_payer">Are you a US tax payer?</string>
-    <string name="us_mailing_address">Dou you have a US mailing address?</string>
+    <string name="us_mailing_address">Do you have a US mailing address?</string>
     <string name="us_green_card">Do you carry a US Green Card?</string>
     <string name="born_us">Where you born in the US?</string>
     <string name="what_is_your_preferred_account_type">What is your preferred account\n type?</string>

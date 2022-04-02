@@ -19,107 +19,118 @@
         android:background="@color/bg_color">
 
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/gStartOuter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/gEndOuter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.95" />
-
-
-        <androidx.core.widget.NestedScrollView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:fillViewport="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/bg_white"
+            android:layout_margin="@dimen/dp15"
+            android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gStartOuter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:paddingBottom="@dimen/dp30">
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gEndOuter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
 
 
-                <LinearLayout
-                    android:id="@+id/lEmployeeDetails"
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/dp15"
-                    android:layout_marginTop="@dimen/dp10"
-                    android:orientation="vertical"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/btNext">
+                    android:clipToPadding="false"
+                    android:paddingBottom="@dimen/dp30">
 
 
-                    <ImageView
-                        android:layout_width="@dimen/dp150"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_baseline_check_circle_24"
-                        android:layout_height="@dimen/dp150" />
-
-                    <TextView
+                    <LinearLayout
+                        android:id="@+id/lEmployeeDetails"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/open_sans_bold"
-                        android:gravity="center"
-                        android:paddingTop="@dimen/dp10"
-                        android:text="@string/welcome_to_ajib"
-                        android:textAppearance="@style/CitoTextAppearance.Basic" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/open_sans_bold"
-                        android:gravity="center"
-                        android:paddingVertical="@dimen/dp15"
-                        android:text="@string/a_confirmation_will_all_n_details_has_been_sent_to_you"
-                        android:textAppearance="@style/CitoTextAppearance.Basic" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/open_sans_bold"
-                        android:gravity="center"
-                        android:text="@string/account_number_87877"
-                        android:textAppearance="@style/CitoTextAppearance.Basic" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/open_sans_bold"
-                        android:gravity="center"
-                        android:text="IBAN: XXXXXXX"
-                        android:textAppearance="@style/CitoTextAppearance.Basic" />
+                        android:layout_marginHorizontal="@dimen/dp15"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/btNext">
 
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="@dimen/dp150"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_check_circle_24"
+                            android:layout_height="@dimen/dp150" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/dp10"
+                            android:text="@string/welcome_to_ajib"
+                            android:textAppearance="@style/CitoTextAppearance.Basic" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/dp15"
+                            android:text="@string/a_confirmation_will_all_n_details_has_been_sent_to_you"
+                            android:textAppearance="@style/CitoTextAppearance.Basic" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:gravity="center"
+                            android:text="@string/account_number_87877"
+                            android:textAppearance="@style/CitoTextAppearance.Basic" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:gravity="center"
+                            android:text="IBAN: XXXXXXX"
+                            android:textAppearance="@style/CitoTextAppearance.Basic" />
 
 
-                <Button
-                    style="@style/ButtonStyle"
-                    android:layout_width="0dp"
-                    android:id="@+id/btNext"
-                    android:layout_height="@dimen/button_size"
-                    android:layout_marginTop="@dimen/dp30"
-                    android:onClick="@{()->clickHandler.onClickNext()}"
-                    android:text="@string/login_page"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@id/lEmployeeDetails"
-                    app:layout_constraintStart_toStartOf="@id/lEmployeeDetails" />
+                    </LinearLayout>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:layout_width="0dp"
+                        android:id="@+id/btNext"
+                        android:layout_height="@dimen/button_size"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:onClick="@{()->clickHandler.onClickNext()}"
+                        android:text="@string/login_page"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/lEmployeeDetails"
+                        app:layout_constraintStart_toStartOf="@id/lEmployeeDetails" />
 
 
-        </androidx.core.widget.NestedScrollView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
